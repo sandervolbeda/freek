@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freek's Vakmanschap | Gitaar Reparatie & Meubels op Maat in Zuidhorn</title>
+    <meta name="description" content="Professionele gitaar reparatie in Zuidhorn, Noordhorn en Briltil. Freek maakt ook meubels op maat en repareert bestaande meubels. Kies voor vakmanschap en duurzaamheid.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            light: '#D2B48C',
+                            DEFAULT: '#8B4513',
+                            dark: '#3E2723',
+                        },
+                        accent: {
+                            green: '#556B2F',
+                            amber: '#CD853F',
+                        },
+                        cream: '#F5F5DC',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Freek's Vakmanschap",
+        "description": "Gitaar reparatie en meubels op maat in Zuidhorn, Noordhorn en Briltil",
+        "image": "images/logo.jpg",
+        "telephone": "+31612345678",
+        "email": "freek@vakmanschap.nl",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hoofdstraat 1",
+            "addressLocality": "Zuidhorn",
+            "postalCode": "9800 AA",
+            "addressCountry": "NL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.2489",
+            "longitude": "6.4042"
+        },
+        "areaServed": ["Zuidhorn", "Noordhorn", "Briltil"],
+        "serviceType": ["Gitaar Reparatie", "Meubels op Maat", "Meubel Reparatie"]
+    }
+    </script>
+    
+    <style>
+        body {
+            background-color: #F5F5DC;
+        }
+        .wood-texture {
+            background-image: url('https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-wood-dark">
+    <!-- Header -->
+    <header class="bg-wood text-cream">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <h1 class="text-2xl md:text-3xl font-serif font-bold">Freek's Vakmanschap</h1>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="menu-toggle" class="md:hidden text-cream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-accent-amber transition duration-300 font-medium">Home</a></li>
+                    <li><a href="guitar-repair.html" class="hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                    <li><a href="custom-furniture.html" class="hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
+                    <li><a href="furniture-repair.html" class="hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
+                    <li><a href="about.html" class="hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                    <li><a href="contact.html" class="hover:text-accent-amber transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="md:hidden hidden bg-wood-dark">
+            <ul class="container mx-auto px-4 py-2 space-y-2">
+                <li><a href="index.html" class="block py-2 hover:text-accent-amber transition duration-300 font-medium">Home</a></li>
+                <li><a href="guitar-repair.html" class="block py-2 hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                <li><a href="custom-furniture.html" class="block py-2 hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
+                <li><a href="furniture-repair.html" class="block py-2 hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-accent-amber transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="wood-texture text-white py-20 md:py-32 relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Vakmanschap uit Zuidhorn</h1>
+                <p class="text-xl mb-8">Gitaar reparatie en meubels op maat met passie voor ambacht en duurzaamheid</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="guitar-repair.html" class="bg-accent-amber hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">Gitaar Reparatie</a>
+                    <a href="custom-furniture.html" class="bg-accent-green hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">Meubels op Maat</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Diensten</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Guitar Repair Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Gitaar Reparatie</h3>
+                        <p class="text-gray-700 mb-4">Professionele gitaar reparatie in Zuidhorn, Noordhorn en Briltil. Van snaarvervanging tot complete restauratie.</p>
+                        <a href="guitar-repair.html" class="text-accent-amber hover:text-wood font-medium">Meer informatie →</a>
+                    </div>
+                </div>
+                
+                <!-- Custom Furniture Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Meubels op Maat</h3>
+                        <p class="text-gray-700 mb-4">Unieke, handgemaakte meubels die perfect passen bij uw interieur. Gemaakt van duurzame materialen.</p>
+                        <a href="custom-furniture.html" class="text-accent-amber hover:text-wood font-medium">Meer informatie →</a>
+                    </div>
+                </div>
+                
+                <!-- Furniture Repair Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1584589167171-541ce45f1eea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Meubel Reparatie</h3>
+                        <p class="text-gray-700 mb-4">Geef uw geliefde meubels een tweede leven. Repareren in plaats van vervangen is beter voor milieu én portemonnee.</p>
+                        <a href="furniture-repair.html" class="text-accent-amber hover:text-wood font-medium">Meer informatie →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="py-16 bg-wood bg-opacity-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1580893246395-52aead8960dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Freek aan het werk in zijn atelier" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-serif font-bold mb-4">Over Freek</h2>
+                    <p class="mb-4">Als ervaren meubelmaker en gitarist combineer ik mijn passies in mijn werk. Vanuit mijn atelier in Zuidhorn help ik klanten uit de hele regio met gitaarreparaties en op maat gemaakte meubels.</p>
+                    <p class="mb-6">Ik geloof sterk in duurzaamheid en het repareren van bestaande items in plaats van nieuwe kopen. Elk stuk dat door mijn handen gaat, krijgt de aandacht en zorg die het verdient.</p>
+                    <a href="about.html" class="bg-wood hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg transition duration-300 inline-block">Lees meer over mij</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Wat klanten zeggen</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Freek heeft mijn oude gitaar weer als nieuw gemaakt. Geweldige service en vakmanschap. Zeker een aanrader voor iedereen in Zuidhorn en omgeving!"</p>
+                    <p class="font-bold">— Jan de Vries, Zuidhorn</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"De eettafel die Freek voor ons heeft gemaakt is prachtig. Precies wat we wilden en van uitstekende kwaliteit. Hij denkt goed mee en levert perfect werk."</p>
+                    <p class="font-bold">— Marieke Jansen, Noordhorn</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Onze antieke kast had flinke schade, maar Freek heeft hem vakkundig gerepareerd. Je ziet niet eens meer waar de schade zat. Echt een vakman!"</p>
+                    <p class="font-bold">— Peter Bakker, Briltil</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-accent-green text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-4">Klaar voor vakmanschap?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Neem contact op voor een vrijblijvende offerte of om te bespreken wat ik voor u kan betekenen.</p>
+            <a href="contact.html" class="bg-white text-accent-green hover:bg-cream font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Contact opnemen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-wood-dark text-cream py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Contact</h3>
+                    <p class="mb-2">Hoofdstraat 1</p>
+                    <p class="mb-2">9800 AA Zuidhorn</p>
+                    <p class="mb-2">Tel: 06-12345678</p>
+                    <p>Email: freek@vakmanschap.nl</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Snelle Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent-amber transition duration-300">Home</a></li>
+                        <li><a href="guitar-repair.html" class="hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                        <li><a href="custom-furniture.html" class="hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
+                        <li><a href="furniture-repair.html" class="hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
+                        <li><a href="about.html" class="hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                        <li><a href="contact.html" class="hover:text-accent-amber transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Service Areas -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Servicegebied</h3>
+                    <p class="mb-4">Freek's Vakmanschap is gevestigd in Zuidhorn en bedient klanten in:</p>
+                    <ul class="space-y-1">
+                        <li>• Zuidhorn</li>
+                        <li>• Noordhorn</li>
+                        <li>• Briltil</li>
+                        <li>• En omliggende gebieden</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-cream border-opacity-20 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Freek's Vakmanschap. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+

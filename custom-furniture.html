@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meubels op Maat | Freek's Vakmanschap | Zuidhorn</title>
+    <meta name="description" content="Handgemaakte meubels op maat in Zuidhorn. Freek maakt unieke, duurzame meubels die perfect passen bij uw interieur. Vakmanschap en kwaliteit uit Zuidhorn.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            light: '#D2B48C',
+                            DEFAULT: '#8B4513',
+                            dark: '#3E2723',
+                        },
+                        accent: {
+                            green: '#556B2F',
+                            amber: '#CD853F',
+                        },
+                        cream: '#F5F5DC',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #F5F5DC;
+        }
+        .wood-texture {
+            background-image: url('https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-wood-dark">
+    <!-- Header -->
+    <header class="bg-wood text-cream">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <h1 class="text-2xl md:text-3xl font-serif font-bold">Freek's Vakmanschap</h1>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="menu-toggle" class="md:hidden text-cream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-accent-amber transition duration-300">Home</a></li>
+                    <li><a href="guitar-repair.html" class="hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                    <li><a href="custom-furniture.html" class="hover:text-accent-amber transition duration-300 font-medium">Meubels op Maat</a></li>
+                    <li><a href="furniture-repair.html" class="hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
+                    <li><a href="about.html" class="hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                    <li><a href="contact.html" class="hover:text-accent-amber transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="md:hidden hidden bg-wood-dark">
+            <ul class="container mx-auto px-4 py-2 space-y-2">
+                <li><a href="index.html" class="block py-2 hover:text-accent-amber transition duration-300">Home</a></li>
+                <li><a href="guitar-repair.html" class="block py-2 hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                <li><a href="custom-furniture.html" class="block py-2 hover:text-accent-amber transition duration-300 font-medium">Meubels op Maat</a></li>
+                <li><a href="furniture-repair.html" class="block py-2 hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-accent-amber transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center py-20 md:py-32 relative" style="background-image: url('https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="container mx-auto px-4 relative z-10 text-white">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Meubels op Maat</h1>
+                <p class="text-xl mb-8">Unieke, handgemaakte meubels die perfect passen bij uw interieur en levensstijl</p>
+                <a href="#process" class="bg-accent-green hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Ontdek het proces</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-serif font-bold mb-6">Handgemaakte Meubels met Karakter</h2>
+                <p class="text-lg mb-6">Als meubelmaker met passie voor hout en design, creëer ik unieke meubels die perfect aansluiten bij uw wensen en interieur. Elk stuk is handgemaakt in mijn atelier in Zuidhorn, met aandacht voor detail en duurzaamheid.</p>
+                <p class="text-lg">Van eettafels en kasten tot bedden en bureaus - elk meubelstuk wordt gemaakt met vakmanschap en liefde voor het ambacht. Het resultaat? Tijdloze meubels met karakter die generaties meegaan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Furniture Types -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Wat Ik Maak</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Type 1 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Tafels & Eettafels</h3>
+                        <p class="text-gray-700">Robuuste eettafels, elegante salontafels en praktische bijzettafels. Gemaakt van massief hout en afgewerkt naar uw wensen.</p>
+                    </div>
+                </div>
+                
+                <!-- Type 2 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Kasten & Opbergruimte</h3>
+                        <p class="text-gray-700">Boekenkasten, tv-meubels, dressoirs en inbouwkasten. Functioneel en stijlvol, perfect passend in uw ruimte.</p>
+                    </div>
+                </div>
+                
+                <!-- Type 3 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Zitmeubels</h3>
+                        <p class="text-gray-700">Banken, stoelen, barkrukken en zitbankjes. Comfortabel en duurzaam, met stoffering naar keuze.</p>
+                    </div>
+                </div>
+                
+                <!-- Type 4 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1505693314053-a40f28df6582?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Bedden & Slaapkamermeubels</h3>
+                        <p class="text-gray-700">Bedframes, nachtkastjes en kledingkasten. Rustgevend design voor een goede nachtrust.</p>
+                    </div>
+                </div>
+                
+                <!-- Type 5 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544457070-4cd773b4d71e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Bureaus & Werkplekken</h3>
+                        <p class="text-gray-700">Ergonomische bureaus, boekenplanken en opbergoplossingen voor een productieve werkplek.</p>
+                    </div>
+                </div>
+                
+                <!-- Type 6 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1602028915047-37269d1a73f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Buitenmeubels</h3>
+                        <p class="text-gray-700">Tuintafels, banken en plantenbakken. Weerbestendig en duurzaam voor jarenlang buitenplezier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials -->
+    <section class="py-16 bg-wood bg-opacity-10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Materialen</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-lg mb-6">Ik werk met zorgvuldig geselecteerde materialen van hoge kwaliteit, met een voorkeur voor duurzaam geproduceerd hout uit verantwoord beheerde bossen.</p>
+                    
+                    <h3 class="text-xl font-serif font-bold mb-4">Houtsoorten</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Eiken:</strong> Duurzaam en tijdloos, met een prachtige nerf</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Noten:</strong> Rijk van kleur met een warme uitstraling</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Esdoorn:</strong> Licht en helder, perfect voor moderne designs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Kersen:</strong> Elegant met een warme, roodachtige tint</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Berken:</strong> Licht en sterk, ideaal voor functionele meubels</span>
+                        </li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-serif font-bold mb-4">Afwerkingen</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Natuurlijke oliën:</strong> Benadrukt de natuurlijke schoonheid van het hout</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Hardwax:</strong> Duurzame bescherming met een subtiele glans</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Matte lak:</strong> Sterke bescherming zonder glans</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent-amber">•</span>
+                            <span><strong>Kleuroliën:</strong> Voor een subtiele kleurverandering met behoud van de houtstructuur</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-cover bg-center rounded-lg h-48" style="background-image: url('https://images.unsplash.com/photo-1533377088493-e27ab4ee4989?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="bg-cover bg-center rounded-lg h-48" style="background-image: url('https://images.unsplash.com/photo-1579463148228-138296ac3b98?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="bg-cover bg-center rounded-lg h-48" style="background-image: url('https://images.unsplash.com/photo-1610219542098-fd8cf67b3c67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="bg-cover bg-center rounded-lg h-48" style="background-image: url('https://images.unsplash.com/photo-1504282706065-f5866e9cbeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Het Proces</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-wood-light transform md:translate-x-[-50%] hidden md:block"></div>
+                    
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row mb-12 relative">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <h3 class="text-xl font-serif font-bold mb-2">1. Consultatie & Ontwerp</h3>
+                            <p>We bespreken uw wensen, budget en tijdlijn. Ik maak schetsen en ontwerpen die we samen verfijnen tot het perfecte meubelstuk voor uw ruimte.</p>
+                        </div>
+                        <div class="hidden md:block absolute left-1/2 top-0 w-8 h-8 bg-accent-amber rounded-full transform -translate-x-1/2 border-4 border-cream"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row mb-12 relative">
+                        <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
+                        </div>
+                        <div class="hidden md:block absolute left-1/2 top-0 w-8 h-8 bg-accent-amber rounded-full transform -translate-x-1/2 border-4 border-cream"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0 order-2 md:order-1">
+                            <h3 class="text-xl font-serif font-bold mb-2">2. Materiaal Selectie</h3>
+                            <p>Samen kiezen we de perfecte houtsoort, afwerking en eventuele aanvullende materialen zoals metaal of glas. Ik help u bij het maken van duurzame keuzes die passen bij uw stijl.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row mb-12 relative">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <h3 class="text-xl font-serif font-bold mb-2">3. Productie</h3>
+                            <p>In mijn atelier in Zuidhorn ga ik aan de slag met het maken van uw meubelstuk. Ik houd u op de hoogte van de voortgang en nodig u uit om tussentijds een kijkje te nemen als u dat wenst.</p>
+                        </div>
+                        <div class="hidden md:block absolute left-1/2 top-0 w-8 h-8 bg-accent-amber rounded-full transform -translate-x-1/2 border-4 border-cream"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row mb-12 relative">
+                        <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
+                        </div>
+                        <div class="hidden md:block absolute left-1/2 top-0 w-8 h-8 bg-accent-amber rounded-full transform -translate-x-1/2 border-4 border-cream"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0 order-2 md:order-1">
+                            <h3 class="text-xl font-serif font-bold mb-2">4. Afwerking</h3>
+                            <p>Elk detail wordt zorgvuldig afgewerkt voor een perfect resultaat. Ik gebruik hoogwaardige, milieuvriendelijke oliën en lakken voor een duurzame bescherming.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="flex flex-col md:flex-row relative">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <h3 class="text-xl font-serif font-bold mb-2">5. Levering & Plaatsing</h3>
+                            <p>Ik lever uw meubelstuk persoonlijk af en zorg voor een correcte plaatsing. U ontvangt advies over onderhoud zodat u jarenlang kunt genieten van uw nieuwe meubel.</p>
+                        </div>
+                        <div class="hidden md:block absolute left-1/2 top-0 w-8 h-8 bg-accent-amber rounded-full transform -translate-x-1/2 border-4 border-cream"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Recente Projecten</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-cover bg-center h-64 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="bg-cover bg-center h-64 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="bg-cover bg-center h-64 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="bg-cover bg-center h-64 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1551516594-56cb78394645?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="bg-cover bg-center h-64 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1532372576444-dda954194ad0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="bg-cover bg-center h-64 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="mb-4">Dit is slechts een kleine selectie van mijn werk. Neem contact op om meer voorbeelden te zien of om uw eigen project te bespreken.</p>
+                <a href="contact.html" class="bg-accent-green hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg transition duration-300 inline-block">Contact opnemen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Wat Klanten Zeggen</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"De eettafel die Freek voor ons heeft gemaakt is prachtig. Precies wat we wilden en van uitstekende kwaliteit. Hij denkt goed mee en levert perfect werk."</p>
+                    <p class="font-bold">— Familie Jansen, Zuidhorn</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Onze boekenkast is een echte blikvanger geworden. Freek heeft precies begrepen wat we zochten en het resultaat overtreft onze verwachtingen. Vakwerk!"</p>
+                    <p class="font-bold">— Peter en Marieke, Noordhorn</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Freek heeft een prachtig bureau voor mijn thuiskantoor gemaakt. De kwaliteit is uitstekend en het past perfect in de ruimte. Zeer tevreden!"</p>
+                    <p class="font-bold">— Jan de Vries, Briltil</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-accent-green text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-4">Klaar voor uw droommeubel?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Laat uw ideeën werkelijkheid worden. Neem contact op voor een vrijblijvend gesprek over uw wensen.</p>
+            <a href="contact.html" class="bg-white text-accent-green hover:bg-cream font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Contact opnemen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-wood-dark text-cream py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Contact</h3>
+                    <p class="mb-2">Hoofdstraat 1</p>
+                    <p class="mb-2">9800 AA Zuidhorn</p>
+                    <p class="mb-2">Tel: 06-12345678</p>
+                    <p>Email: freek@vakmanschap.nl</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Snelle Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent-amber transition duration-300">Home</a></li>
+                        <li><a href="guitar-repair.html" class="hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                        <li><a href="custom-furniture.html" class="hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
+                        <li><a href="furniture-repair.html" class="hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
+                        <li><a href="about.html" class="hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                        <li><a href="contact.html" class="hover:text-accent-amber transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Service Areas -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Servicegebied</h3>
+                    <p class="mb-4">Freek's Vakmanschap is gevestigd in Zuidhorn en bedient klanten in:</p>
+                    <ul class="space-y-1">
+                        <li>• Zuidhorn</li>
+                        <li>• Noordhorn</li>
+                        <li>• Briltil</li>
+                        <li>• En omliggende gebieden</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-cream border-opacity-20 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Freek's Vakmanschap. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+

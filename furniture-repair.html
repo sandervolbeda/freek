@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meubel Reparatie | Freek's Vakmanschap | Zuidhorn</title>
+    <meta name="description" content="Professionele meubel reparatie in Zuidhorn. Freek geeft uw geliefde meubels een tweede leven. Duurzaam en vakkundig herstel van beschadigde meubels.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            light: '#D2B48C',
+                            DEFAULT: '#8B4513',
+                            dark: '#3E2723',
+                        },
+                        accent: {
+                            green: '#556B2F',
+                            amber: '#CD853F',
+                        },
+                        cream: '#F5F5DC',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #F5F5DC;
+        }
+        .wood-texture {
+            background-image: url('https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-wood-dark">
+    <!-- Header -->
+    <header class="bg-wood text-cream">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <h1 class="text-2xl md:text-3xl font-serif font-bold">Freek's Vakmanschap</h1>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="menu-toggle" class="md:hidden text-cream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-accent-amber transition duration-300">Home</a></li>
+                    <li><a href="guitar-repair.html" class="hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                    <li><a href="custom-furniture.html" class="hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
+                    <li><a href="furniture-repair.html" class="hover:text-accent-amber transition duration-300 font-medium">Meubel Reparatie</a></li>
+                    <li><a href="about.html" class="hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                    <li><a href="contact.html" class="hover:text-accent-amber transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="md:hidden hidden bg-wood-dark">
+            <ul class="container mx-auto px-4 py-2 space-y-2">
+                <li><a href="index.html" class="block py-2 hover:text-accent-amber transition duration-300">Home</a></li>
+                <li><a href="guitar-repair.html" class="block py-2 hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                <li><a href="custom-furniture.html" class="block py-2 hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
+                <li><a href="furniture-repair.html" class="block py-2 hover:text-accent-amber transition duration-300 font-medium">Meubel Reparatie</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-accent-amber transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center py-20 md:py-32 relative" style="background-image: url('https://images.unsplash.com/photo-1584589167171-541ce45f1eea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="container mx-auto px-4 relative z-10 text-white">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Meubel Reparatie</h1>
+                <p class="text-xl mb-8">Geef uw geliefde meubels een tweede leven met vakkundige reparatie en restauratie</p>
+                <a href="#services" class="bg-accent-green hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Bekijk diensten</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-serif font-bold mb-6">Repareren in plaats van Vervangen</h2>
+                <p class="text-lg mb-6">Heeft u een geliefd meubelstuk dat beschadigd is of tekenen van slijtage vertoont? Als ervaren meubelmaker kan ik uw meubels vakkundig repareren en restaureren, zodat ze weer jaren meegaan.</p>
+                <p class="text-lg">Ik geloof sterk in duurzaamheid en het verlengen van de levensduur van meubels. Repareren is niet alleen beter voor het milieu, maar behoudt ook de emotionele waarde en het karakter van uw meubels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Reparatie Diensten</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="flex">
+                    <div class="mr-4 text-accent-amber">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold mb-2">Structurele Reparaties</h3>
+                        <p>Reparatie van gebroken poten, losse verbindingen, gescheurde panelen en andere structurele problemen. Uw meubel wordt weer stevig en veilig in gebruik.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="flex">
+                    <div class="mr-4 text-accent-amber">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold mb-2">Oppervlakte Reparaties</h3>
+                        <p>Herstel van krassen, deuken, brandplekken en waterschade. Ik gebruik speciale technieken om beschadigingen vrijwel onzichtbaar te maken.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="flex">
+                    <div class="mr-4 text-accent-amber">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold mb-2">Fineer Reparatie</h3>
+                        <p>Reparatie of vervanging van beschadigd of ontbrekend fineer. Ik match zorgvuldig de houtsoort en nerf voor een naadloze afwerking.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="flex">
+                    <div class="mr-4 text-accent-amber">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold mb-2">Opnieuw Stofferen</h3>
+                        <p>Vervanging van versleten of beschadigde stoffering van stoelen, banken en andere gestoffeerde meubels. Keuze uit een breed scala aan stoffen.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="flex">
+                    <div class="mr-4 text-accent-amber">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold mb-2">Afwerking Herstel</h3>
+                        <p>Herstel van beschadigde lak of olie-afwerking. Ik kan de originele afwerking herstellen of een nieuwe, beschermende laag aanbrengen.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="flex">
+                    <div class="mr-4 text-accent-amber">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold mb-2">Antiek Restauratie</h3>
+                        <p>Zorgvuldige restauratie van antieke meubels met respect voor de originele technieken en materialen. Behoud van de historische waarde en authenticiteit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Repair -->
+    <section class="py-16 bg-wood bg-opacity-10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Waarom Repareren?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Reason 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-serif font-bold mb-3">Duurzaamheid</h3>
+                    <p>Door meubels te repareren in plaats van te vervangen, vermindert u de vraag naar nieuwe grondstoffen en voorkomt u dat meubels op de afvalberg belanden.</p>
+                </div>
+                
+                <!-- Reason 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-serif font-bold mb-3">Emotionele Waarde</h3>
+                    <p>Veel meubels hebben een emotionele of sentimentele waarde. Reparatie behoudt de herinneringen en het verhaal achter uw geliefde stukken.</p>
+                </div>
+                
+                <!-- Reason 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-serif font-bold mb-3">Kwaliteit</h3>
+                    <p>Oudere meubels zijn vaak van betere kwaliteit dan nieuwe, massageproduceerde stukken. Het loont om te investeren in reparatie van goed gemaakte meubels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Het Reparatieproces</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <ol class="space-y-6">
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 bg-accent-amber rounded-full text-white font-bold">1</div>
+                                <div>
+                                    <h3 class="text-xl font-serif font-bold mb-1">Inspectie & Diagnose</h3>
+                                    <p>Ik bekijk uw meubel zorgvuldig om de aard en omvang van de schade te bepalen en stel een reparatieplan op.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 bg-accent-amber rounded-full text-white font-bold">2</div>
+                                <div>
+                                    <h3 class="text-xl font-serif font-bold mb-1">Offerte</h3>
+                                    <p>U ontvangt een gedetailleerde offerte met de kosten en tijdlijn voor de reparatie. Geen verrassingen achteraf.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 bg-accent-amber rounded-full text-white font-bold">3</div>
+                                <div>
+                                    <h3 class="text-xl font-serif font-bold mb-1">Reparatie</h3>
+                                    <p>Ik voer de reparatie uit in mijn atelier in Zuidhorn, met gebruik van de juiste technieken en materialen.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 bg-accent-amber rounded-full text-white font-bold">4</div>
+                                <div>
+                                    <h3 class="text-xl font-serif font-bold mb-1">Afwerking</h3>
+                                    <p>Het meubel wordt zorgvuldig afgewerkt om de reparatie zo onzichtbaar mogelijk te maken en de originele uitstraling te behouden.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0 flex items-center justify-center w-8 h-8 bg-accent-amber rounded-full text-white font-bold">5</div>
+                                <div>
+                                    <h3 class="text-xl font-serif font-bold mb-1">Levering & Nazorg</h3>
+                                    <p>Uw gerepareerde meubel wordt teruggebracht en u ontvangt advies over onderhoud om toekomstige schade te voorkomen.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-cover bg-center h-48 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                        <div class="bg-cover bg-center h-48 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1580480055273-228ff5388ef8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                        <div class="bg-cover bg-center h-48 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before and After -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Voor & Na</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Example 1 -->
+                <div class="bg-cream p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-serif font-bold mb-4">Antieke Eettafel</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <p class="font-bold mb-2">Voor</p>
+                            <div class="bg-cover bg-center h-48 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1581428982868-e410dd047a90?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">Na</p>
+                            <div class="bg-cover bg-center h-48 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1615875605825-5eb9bb5d52ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                        </div>
+                    </div>
+                    <p>Deze antieke eettafel had waterschade en losse verbindingen. Na reparatie en restauratie is de tafel weer stabiel en ziet er prachtig uit.</p>
+                </div>
+                
+                <!-- Example 2 -->
+                <div class="bg-cream p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-serif font-bold mb-4">Vintage Fauteuil</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <p class="font-bold mb-2">Voor</p>
+                            <div class="bg-cover bg-center h-48 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">Na</p>
+                            <div class="bg-cover bg-center h-48 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                        </div>
+                    </div>
+                    <p>Deze fauteuil had versleten stoffering en een gebroken frame. Na reparatie van het frame en nieuwe stoffering is de stoel weer comfortabel en stijlvol.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="mb-4">Dit zijn slechts enkele voorbeelden van mijn reparatiewerk. Elk project is uniek en krijgt de aandacht die het verdient.</p>
+                <a href="contact.html" class="bg-accent-green hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg transition duration-300 inline-block">Contact opnemen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Wat Klanten Zeggen</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Onze antieke kast had flinke schade, maar Freek heeft hem vakkundig gerepareerd. Je ziet niet eens meer waar de schade zat. Echt een vakman!"</p>
+                    <p class="font-bold">— Peter Bakker, Briltil</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Freek heeft onze oude eetkamerstoelen gerepareerd en opnieuw gestoffeerd. Ze zien er weer uit als nieuw en zijn weer stevig. Zeer tevreden!"</p>
+                    <p class="font-bold">— Familie de Vries, Zuidhorn</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent-amber">
+                            <!-- Star icons -->
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Ik dacht dat onze salontafel verloren was na waterschade, maar Freek heeft hem perfect gerepareerd. Zijn vakmanschap en oog voor detail zijn indrukwekkend."</p>
+                    <p class="font-bold">— Marieke Jansen, Noordhorn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-accent-green text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-4">Geef uw meubels een tweede leven</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Neem contact op voor een vrijblijvende inspectie en offerte voor uw meubel reparatie.</p>
+            <a href="contact.html" class="bg-white text-accent-green hover:bg-cream font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Contact opnemen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-wood-dark text-cream py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Contact</h3>
+                    <p class="mb-2">Hoofdstraat 1</p>
+                    <p class="mb-2">9800 AA Zuidhorn</p>
+                    <p class="mb-2">Tel: 06-12345678</p>
+                    <p>Email: freek@vakmanschap.nl</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Snelle Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent-amber transition duration-300">Home</a></li>
+                        <li><a href="guitar-repair.html" class="hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
+                        <li><a href="custom-furniture.html" class="hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
+                        <li><a href="furniture-repair.html" class="hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
+                        <li><a href="about.html" class="hover:text-accent-amber transition duration-300">Over Freek</a></li>
+                        <li><a href="contact.html" class="hover:text-accent-amber transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Service Areas -->
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Servicegebied</h3>
+                    <p class="mb-4">Freek's Vakmanschap is gevestigd in Zuidhorn en bedient klanten in:</p>
+                    <ul class="space-y-1">
+                        <li>• Zuidhorn</li>
+                        <li>• Noordhorn</li>
+                        <li>• Briltil</li>
+                        <li>• En omliggende gebieden</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-cream border-opacity-20 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Freek's Vakmanschap. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
