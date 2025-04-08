@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freek's Vakmanschap | Gitaar Reparatie & Meubels op Maat in Zuidhorn</title>
-    <meta name="description" content="Professionele gitaar reparatie in Zuidhorn, Noordhorn en Briltil. Freek maakt ook meubels op maat en repareert bestaande meubels. Kies voor vakmanschap en duurzaamheid.">
+    <title>Freek's Gitaar Reparatie | Zuidhorn, Noordhorn & Briltil</title>
+    <meta name="description" content="Professionele gitaar reparatie in Zuidhorn, Noordhorn en Briltil. Freek biedt snaarvervanging, fretwerk, elektronische reparaties en meer met vakmanschap en passie.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,20 +13,21 @@
             theme: {
                 extend: {
                     colors: {
-                        wood: {
-                            light: '#D2B48C',
-                            DEFAULT: '#8B4513',
-                            dark: '#3E2723',
+                        primary: {
+                            light: '#4C956C',
+                            DEFAULT: '#2C6E49',
+                            dark: '#183A37',
                         },
                         accent: {
-                            green: '#556B2F',
-                            amber: '#CD853F',
+                            light: '#FFC9B9',
+                            DEFAULT: '#FEFEE3',
+                            dark: '#D68C45',
                         },
-                        cream: '#F5F5DC',
+                        cream: '#F6F4E6',
                     },
                     fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Roboto', 'sans-serif'],
+                        sans: ['Poppins', 'system-ui', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
                     },
                 },
             },
@@ -34,18 +35,18 @@
     </script>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Freek's Vakmanschap",
-        "description": "Gitaar reparatie en meubels op maat in Zuidhorn, Noordhorn en Briltil",
+        "name": "Freek's Gitaar Reparatie",
+        "description": "Gitaar reparatie in Zuidhorn, Noordhorn en Briltil",
         "image": "images/logo.jpg",
         "telephone": "+31612345678",
-        "email": "freek@vakmanschap.nl",
+        "email": "freek@gitaarreparatie.nl",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Hoofdstraat 1",
@@ -59,31 +60,43 @@
             "longitude": "6.4042"
         },
         "areaServed": ["Zuidhorn", "Noordhorn", "Briltil"],
-        "serviceType": ["Gitaar Reparatie", "Meubels op Maat", "Meubel Reparatie"]
+        "serviceType": ["Gitaar Reparatie", "Gitaar Onderhoud", "Gitaar Setup"]
     }
     </script>
     
     <style>
         body {
-            background-color: #F5F5DC;
+            scroll-behavior: smooth;
+            background-color: #F6F4E6;
         }
-        .wood-texture {
-            background-image: url('https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
+        .section-heading {
+            position: relative;
+            display: inline-block;
+        }
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #2C6E49;
+        }
+        .countdown {
+            font-variant-numeric: tabular-nums;
         }
     </style>
 </head>
-<body class="font-sans text-wood-dark">
+<body class="font-sans text-primary-dark bg-cream">
     <!-- Header -->
-    <header class="bg-wood text-cream">
-        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center mb-4 md:mb-0">
-                <h1 class="text-2xl md:text-3xl font-serif font-bold">Freek's Vakmanschap</h1>
+    <header class="bg-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-display font-bold text-primary">Freek's Gitaar Reparatie</h1>
             </div>
             
             <!-- Mobile menu button -->
-            <button id="menu-toggle" class="md:hidden text-cream focus:outline-none">
+            <button id="menu-toggle" class="md:hidden text-primary focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -91,206 +104,564 @@
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:block">
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="hover:text-accent-amber transition duration-300 font-medium">Home</a></li>
-                    <li><a href="guitar-repair.html" class="hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
-                    <li><a href="custom-furniture.html" class="hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
-                    <li><a href="furniture-repair.html" class="hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
-                    <li><a href="about.html" class="hover:text-accent-amber transition duration-300">Over Freek</a></li>
-                    <li><a href="contact.html" class="hover:text-accent-amber transition duration-300">Contact</a></li>
+                <ul class="flex space-x-8">
+                    <li><a href="#services" class="font-medium hover:text-primary-light transition duration-300">Diensten</a></li>
+                    <li><a href="#about" class="font-medium hover:text-primary-light transition duration-300">Over Freek</a></li>
+                    <li><a href="#testimonials" class="font-medium hover:text-primary-light transition duration-300">Ervaringen</a></li>
+                    <li><a href="#contact" class="font-medium hover:text-primary-light transition duration-300">Contact</a></li>
                 </ul>
             </nav>
         </div>
         
         <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="md:hidden hidden bg-wood-dark">
-            <ul class="container mx-auto px-4 py-2 space-y-2">
-                <li><a href="index.html" class="block py-2 hover:text-accent-amber transition duration-300 font-medium">Home</a></li>
-                <li><a href="guitar-repair.html" class="block py-2 hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
-                <li><a href="custom-furniture.html" class="block py-2 hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
-                <li><a href="furniture-repair.html" class="block py-2 hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
-                <li><a href="about.html" class="block py-2 hover:text-accent-amber transition duration-300">Over Freek</a></li>
-                <li><a href="contact.html" class="block py-2 hover:text-accent-amber transition duration-300">Contact</a></li>
+        <nav id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <ul class="container mx-auto px-4 py-2 space-y-3">
+                <li><a href="#services" class="block py-2 hover:text-primary-light transition duration-300">Diensten</a></li>
+                <li><a href="#about" class="block py-2 hover:text-primary-light transition duration-300">Over Freek</a></li>
+                <li><a href="#testimonials" class="block py-2 hover:text-primary-light transition duration-300">Ervaringen</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-primary-light transition duration-300">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Special Offer Banner (Scarcity) -->
+    <div class="bg-accent-dark text-white py-3">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-medium">
+                <span class="font-bold">Speciale aanbieding:</span> 
+                Gratis snaren bij elke setup in de maand mei! Nog 
+                <span id="countdown" class="font-bold countdown">14</span> 
+                dagen beschikbaar.
+            </p>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="wood-texture text-white py-20 md:py-32 relative">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="container mx-auto px-4 relative z-10">
+    <section class="bg-primary text-white py-20 md:py-28">
+        <div class="container mx-auto px-4">
             <div class="max-w-2xl">
-                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Vakmanschap uit Zuidhorn</h1>
-                <p class="text-xl mb-8">Gitaar reparatie en meubels op maat met passie voor ambacht en duurzaamheid</p>
+                <span class="inline-block bg-white bg-opacity-20 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Gitaar Reparatie Specialist in Zuidhorn</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">Jouw gitaar verdient vakmanschap</h1>
+                <p class="text-xl mb-8 opacity-90">Meer dan 200 tevreden gitaristen vertrouwen op Freek's expertise voor reparatie en onderhoud</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="guitar-repair.html" class="bg-accent-amber hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">Gitaar Reparatie</a>
-                    <a href="custom-furniture.html" class="bg-accent-green hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">Meubels op Maat</a>
+                    <a href="#services" class="bg-accent-dark hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-center">Bekijk diensten</a>
+                    <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-center">Gratis consult aanvragen</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview -->
+    <!-- Free Guide Section (Reciprocity) -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-accent rounded-lg p-8 flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2 text-primary-dark">Gratis Gitaar Onderhoudsgids</h2>
+                    <p class="text-primary-dark mb-4">Download onze gratis gids met 10 tips om je gitaar in topconditie te houden. Leer hoe je kleine problemen zelf kunt oplossen en wanneer het tijd is om een professional in te schakelen.</p>
+                </div>
+                <div>
+                    <form class="flex flex-col sm:flex-row">
+                        <input type="email" placeholder="Jouw e-mailadres" class="px-4 py-3 rounded-l-lg sm:rounded-l-lg sm:rounded-r-none mb-2 sm:mb-0 border border-primary border-opacity-20 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="bg-primary hover:bg-primary-light text-white font-bold py-3 px-6 rounded-r-lg sm:rounded-l-none sm:rounded-r-lg transition duration-300">Download Nu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
     <section class="py-16 bg-cream">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Diensten</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Guitar Repair Card -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2">Gitaar Reparatie</h3>
-                        <p class="text-gray-700 mb-4">Professionele gitaar reparatie in Zuidhorn, Noordhorn en Briltil. Van snaarvervanging tot complete restauratie.</p>
-                        <a href="guitar-repair.html" class="text-accent-amber hover:text-wood font-medium">Meer informatie →</a>
-                    </div>
-                </div>
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-8 section-heading text-primary-dark">Vakkundige Gitaar Reparatie</h2>
+                <p class="text-lg mb-6 leading-relaxed">Als gitarist én vakman begrijp ik hoe belangrijk jouw instrument voor je is. In mijn werkplaats in Zuidhorn bied ik professionele gitaarreparatie en onderhoud voor klanten uit Zuidhorn, Noordhorn, Briltil en omgeving.</p>
+                <p class="text-lg leading-relaxed">Of het nu gaat om een eenvoudige afstelling, snaarvervanging of een complexe restauratie, ik behandel elk instrument met de grootste zorg en precisie.</p>
                 
-                <!-- Custom Furniture Card -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2">Meubels op Maat</h3>
-                        <p class="text-gray-700 mb-4">Unieke, handgemaakte meubels die perfect passen bij uw interieur. Gemaakt van duurzame materialen.</p>
-                        <a href="custom-furniture.html" class="text-accent-amber hover:text-wood font-medium">Meer informatie →</a>
+                <!-- Trust Indicators (Authority) -->
+                <div class="flex flex-wrap justify-center mt-10 gap-6">
+                    <div class="flex items-center">
+                        <div class="mr-3 text-primary">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-bold">Gecertificeerd</p>
+                            <p class="text-sm">Gitaarreparatie Specialist</p>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Furniture Repair Card -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1584589167171-541ce45f1eea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2">Meubel Reparatie</h3>
-                        <p class="text-gray-700 mb-4">Geef uw geliefde meubels een tweede leven. Repareren in plaats van vervangen is beter voor milieu én portemonnee.</p>
-                        <a href="furniture-repair.html" class="text-accent-amber hover:text-wood font-medium">Meer informatie →</a>
+                    <div class="flex items-center">
+                        <div class="mr-3 text-primary">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-bold">200+ Klanten</p>
+                            <p class="text-sm">Tevreden gitaristen</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="mr-3 text-primary">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-bold">15+ Jaar</p>
+                            <p class="text-sm">Ervaring als gitarist</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Preview -->
-    <section class="py-16 bg-wood bg-opacity-10">
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <img src="https://images.unsplash.com/photo-1580893246395-52aead8960dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Freek aan het werk in zijn atelier" class="rounded-lg shadow-lg">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-serif font-bold mb-4">Over Freek</h2>
-                    <p class="mb-4">Als ervaren meubelmaker en gitarist combineer ik mijn passies in mijn werk. Vanuit mijn atelier in Zuidhorn help ik klanten uit de hele regio met gitaarreparaties en op maat gemaakte meubels.</p>
-                    <p class="mb-6">Ik geloof sterk in duurzaamheid en het repareren van bestaande items in plaats van nieuwe kopen. Elk stuk dat door mijn handen gaat, krijgt de aandacht en zorg die het verdient.</p>
-                    <a href="about.html" class="bg-wood hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg transition duration-300 inline-block">Lees meer over mij</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-16 bg-cream">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Wat klanten zeggen</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-12 section-heading text-primary-dark">Mijn Diensten</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-cream p-8 rounded-lg border-l-4 border-primary">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-dark">Setup & Afstelling</h3>
+                    <p class="text-gray-700 mb-4">Optimale speelbaarheid door professionele afstelling van actie, intonatie en halskromming. Je gitaar zal beter spelen en klinken.</p>
+                    <p class="font-medium text-primary">Vanaf €45</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-cream p-8 rounded-lg border-l-4 border-primary">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-dark">Fretwerk</h3>
+                    <p class="text-gray-700 mb-4">Versleten frets vervangen of polijsten voor een gladde speelervaring zonder buzzing of dode noten. Precisiewerk voor optimaal speelcomfort.</p>
+                    <p class="font-medium text-primary">Vanaf €75</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-cream p-8 rounded-lg border-l-4 border-primary">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-dark">Elektronische Reparaties</h3>
+                    <p class="text-gray-700 mb-4">Reparatie of vervanging van elementen, potmeters, schakelaars en bedrading. Elimineer storende bijgeluiden en verbeter de klank.</p>
+                    <p class="font-medium text-primary">Vanaf €60</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-cream p-8 rounded-lg border-l-4 border-primary">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-dark">Structurele Reparaties</h3>
+                    <p class="text-gray-700 mb-4">Reparatie van scheuren, gebroken kopstukken, losse bruggen en andere structurele problemen. Vakkundige restauratie met oog voor detail.</p>
+                    <p class="font-medium text-primary">Prijs op aanvraag</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-cream p-8 rounded-lg border-l-4 border-primary">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-dark">Afwerking & Restauratie</h3>
+                    <p class="text-gray-700 mb-4">Herstel van beschadigde lak, kleuraanpassingen en volledige restauratie van vintage instrumenten. Behoud de schoonheid en waarde van je gitaar.</p>
+                    <p class="font-medium text-primary">Vanaf €90</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-cream p-8 rounded-lg border-l-4 border-primary">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-dark">Onderhoud & Preventie</h3>
+                    <p class="text-gray-700 mb-4">Regelmatig onderhoud om problemen te voorkomen en de levensduur van je instrument te verlengen. Inclusief reiniging, polijsten en preventieve controles.</p>
+                    <p class="font-medium text-primary">Vanaf €35</p>
+                </div>
+            </div>
+            
+            <!-- Call to Action (Commitment) -->
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-block bg-primary hover:bg-primary-light text-white font-bold py-3 px-8 rounded-lg transition duration-300">Plan een gratis inspectie</a>
+                <p class="mt-3 text-sm text-gray-600">Geen verplichtingen, geen kosten - alleen professioneel advies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-12 section-heading text-primary-dark">Servicegebied</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg mb-8 text-center">Freek's Gitaar Reparatie is gevestigd in Zuidhorn en biedt diensten in de volgende gebieden:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <!-- Area 1 -->
+                    <div class="bg-white p-8 rounded-lg border-t-4 border-primary">
+                        <h3 class="text-2xl font-bold mb-3 text-primary-dark">Zuidhorn</h3>
+                        <p>Hoofdvestiging met volledig uitgeruste werkplaats voor alle gitaarreparaties.</p>
+                    </div>
+                    
+                    <!-- Area 2 -->
+                    <div class="bg-white p-8 rounded-lg border-t-4 border-primary">
+                        <h3 class="text-2xl font-bold mb-3 text-primary-dark">Noordhorn</h3>
+                        <p>Snelle service voor klanten uit Noordhorn, op slechts enkele minuten afstand.</p>
+                    </div>
+                    
+                    <!-- Area 3 -->
+                    <div class="bg-white p-8 rounded-lg border-t-4 border-primary">
+                        <h3 class="text-2xl font-bold mb-3 text-primary-dark">Briltil</h3>
+                        <p>Professionele gitaarreparatie voor muzikanten uit Briltil en omgeving.</p>
+                    </div>
+                </div>
+                
+                <p class="mt-8 text-center">Woon je buiten deze gebieden? Neem gerust contact op om de mogelijkheden te bespreken.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Liking) -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1580893246395-52aead8960dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Freek aan het werk in zijn werkplaats" class="rounded-lg w-full">
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8 section-heading text-primary-dark">Over Freek</h2>
+                    <p class="text-lg mb-4 leading-relaxed">Welkom! Ik ben Freek, gitaarreparateur gevestigd in Zuidhorn. Al van jongs af aan ben ik gefascineerd door muziek en gitaren, een passie die ik nu in mijn dagelijks werk kan uitleven.</p>
+                    <p class="text-lg mb-4 leading-relaxed">Als fervent gitarist begrijp ik wat een gitaar nodig heeft om optimaal te presteren. Ik combineer mijn technische kennis met praktijkervaring om de beste service te bieden.</p>
+                    <p class="text-lg mb-6 leading-relaxed">Ik geloof sterk in vakmanschap en persoonlijke aandacht. Elk instrument dat in mijn werkplaats komt, krijgt de zorg en precisie die het verdient.</p>
+                    
+                    <!-- Personal Touch -->
+                    <div class="bg-cream p-4 rounded-lg border-l-4 border-primary-light italic">
+                        "Mijn grootste voldoening is het moment waarop een klant zijn gerepareerde gitaar weer bespeelt en die glimlach van tevredenheid verschijnt. Dat is waar ik het voor doe."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Social Proof) -->
+    <section id="testimonials" class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 section-heading text-primary-dark">Wat Klanten Zeggen</h2>
+            <p class="text-center mb-12 max-w-2xl mx-auto">Meer dan 50 5-sterren beoordelingen van tevreden klanten uit Zuidhorn, Noordhorn en Briltil</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-8 rounded-lg">
                     <div class="flex items-center mb-4">
-                        <div class="text-accent-amber">
+                        <div class="text-accent-dark">
                             <!-- Star icons -->
                             <span>★★★★★</span>
                         </div>
                     </div>
                     <p class="mb-4 italic">"Freek heeft mijn oude gitaar weer als nieuw gemaakt. Geweldige service en vakmanschap. Zeker een aanrader voor iedereen in Zuidhorn en omgeving!"</p>
-                    <p class="font-bold">— Jan de Vries, Zuidhorn</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3">JV</div>
+                        <div>
+                            <p class="font-bold">Jan de Vries</p>
+                            <p class="text-sm text-gray-600">Zuidhorn • Gitarist</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Testimonial 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-8 rounded-lg">
                     <div class="flex items-center mb-4">
-                        <div class="text-accent-amber">
+                        <div class="text-accent-dark">
                             <!-- Star icons -->
                             <span>★★★★★</span>
                         </div>
                     </div>
-                    <p class="mb-4 italic">"De eettafel die Freek voor ons heeft gemaakt is prachtig. Precies wat we wilden en van uitstekende kwaliteit. Hij denkt goed mee en levert perfect werk."</p>
-                    <p class="font-bold">— Marieke Jansen, Noordhorn</p>
+                    <p class="mb-4 italic">"Mijn elektrische gitaar had problemen met de elektronica. Freek heeft alles perfect gerepareerd en de gitaar klinkt nu beter dan ooit. Snelle service en redelijke prijzen."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3">MJ</div>
+                        <div>
+                            <p class="font-bold">Marieke Jansen</p>
+                            <p class="text-sm text-gray-600">Noordhorn • Bassist</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Testimonial 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-8 rounded-lg">
                     <div class="flex items-center mb-4">
-                        <div class="text-accent-amber">
+                        <div class="text-accent-dark">
                             <!-- Star icons -->
                             <span>★★★★★</span>
                         </div>
                     </div>
-                    <p class="mb-4 italic">"Onze antieke kast had flinke schade, maar Freek heeft hem vakkundig gerepareerd. Je ziet niet eens meer waar de schade zat. Echt een vakman!"</p>
-                    <p class="font-bold">— Peter Bakker, Briltil</p>
+                    <p class="mb-4 italic">"Freek heeft mijn vintage gitaar vakkundig gerestaureerd. Hij heeft echt verstand van zaken en neemt de tijd om alles goed uit te leggen. Zeer tevreden!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3">PB</div>
+                        <div>
+                            <p class="font-bold">Peter Bakker</p>
+                            <p class="text-sm text-gray-600">Briltil • Muziekleraar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Proof Counter -->
+            <div class="mt-12 flex flex-wrap justify-center gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-sm w-48">
+                    <p class="text-4xl font-bold text-primary">200+</p>
+                    <p class="text-gray-600">Tevreden klanten</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm w-48">
+                    <p class="text-4xl font-bold text-primary">15+</p>
+                    <p class="text-gray-600">Jaar ervaring</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm w-48">
+                    <p class="text-4xl font-bold text-primary">50+</p>
+                    <p class="text-gray-600">5-sterren reviews</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-16 bg-accent-green text-white">
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-12 section-heading text-primary-dark">Veelgestelde Vragen</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-cream p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">Hoe lang duurt een gitaarreparatie?</h3>
+                    <p>De meeste reparaties zijn binnen 2-5 werkdagen klaar, afhankelijk van de complexiteit. Bij spoed kan ik vaak binnen 24-48 uur service bieden.</p>
+                </div>
+                
+                <div class="bg-cream p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">Wat kost een setup/afstelling?</h3>
+                    <p>Een basis setup kost €45 voor een elektrische gitaar en €40 voor een akoestische gitaar. Dit omvat snaarvervanging, afstelling van actie, intonatie en halskromming.</p>
+                </div>
+                
+                <div class="bg-cream p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">Geef je garantie op reparaties?</h3>
+                    <p>Ja, op alle reparaties geef ik 3 maanden garantie. Als er binnen die periode problemen ontstaan met het gerepareerde onderdeel, los ik dit kosteloos op.</p>
+                </div>
+                
+                <div class="bg-cream p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">Moet ik een afspraak maken?</h3>
+                    <p>Ja, ik werk op afspraak zodat ik voldoende tijd kan reserveren voor jouw gitaar. Je kunt eenvoudig online een afspraak maken of telefonisch contact opnemen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-12 section-heading">Contact</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Details -->
+                <div>
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="mr-4 text-accent-light mt-1">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Adres</h3>
+                                <p>Hoofdstraat 1</p>
+                                <p>9800 AA Zuidhorn</p>
+                                <p class="mt-2 text-sm opacity-80">Servicegebied: Zuidhorn, Noordhorn, Briltil en omgeving</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 text-accent-light mt-1">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Telefoon</h3>
+                                <p>06-12345678</p>
+                                <p class="mt-2 text-sm opacity-80">Bereikbaar op werkdagen van 9:00 tot 18:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 text-accent-light mt-1">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">E-mail</h3>
+                                <p>freek@gitaarreparatie.nl</p>
+                                <p class="mt-2 text-sm opacity-80">Ik reageer binnen 24 uur op je bericht</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 text-accent-light mt-1">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Openingstijden</h3>
+                                <p>Maandag t/m vrijdag: 9:00 - 18:00</p>
+                                <p>Zaterdag: 10:00 - 16:00</p>
+                                <p>Zondag: Gesloten</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form (Commitment) -->
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Naam</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-light text-white" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-light text-white" required>
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block mb-2 font-medium">Gewenste dienst</label>
+                            <select id="service" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-light text-white">
+                                <option value="">Selecteer een dienst</option>
+                                <option value="setup">Setup & Afstelling</option>
+                                <option value="fretwork">Fretwerk</option>
+                                <option value="electronics">Elektronische Reparaties</option>
+                                <option value="structural">Structurele Reparaties</option>
+                                <option value="finish">Afwerking & Restauratie</option>
+                                <option value="maintenance">Onderhoud & Preventie</option>
+                                <option value="consultation">Gratis Consult</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Bericht</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-light text-white" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-accent-dark hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Verstuur Bericht</button>
+                    </form>
+                    
+                    <!-- Response Time Promise -->
+                    <div class="mt-6 flex items-center">
+                        <svg class="w-5 h-5 text-accent-light mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <p class="text-sm">Ik reageer binnen 24 uur op alle aanvragen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-8 section-heading text-primary-dark">Locatie</h2>
+            
+            <div class="bg-white rounded-lg overflow-hidden h-96">
+                <!-- Replace with actual Google Maps embed code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19088.92193369602!2d6.3792!3d53.2489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd7f57f9d8f7%3A0x2a8dc8f65bfb9892!2sZuidhorn%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="max-w-2xl mx-auto">De werkplaats is gemakkelijk bereikbaar vanuit Zuidhorn, Noordhorn en Briltil. Er is voldoende parkeergelegenheid beschikbaar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA (Scarcity + Commitment) -->
+    <section class="py-16 bg-accent-dark text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-serif font-bold mb-4">Klaar voor vakmanschap?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Neem contact op voor een vrijblijvende offerte of om te bespreken wat ik voor u kan betekenen.</p>
-            <a href="contact.html" class="bg-white text-accent-green hover:bg-cream font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Contact opnemen</a>
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Klaar om je gitaar te laten stralen?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Plan nu je gratis inspectie en ontvang 10% korting op je eerste reparatie!</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="bg-white text-accent-dark hover:bg-opacity-90 font-bold py-3 px-8 rounded-lg transition duration-300">Plan een afspraak</a>
+                <a href="tel:+31612345678" class="bg-transparent border-2 border-white hover:bg-white hover:text-accent-dark text-white font-bold py-3 px-8 rounded-lg transition duration-300">Bel direct: 06-12345678</a>
+            </div>
+            <p class="mt-4 text-sm">* Aanbieding geldig voor nieuwe klanten tot eind mei</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-wood-dark text-cream py-12">
+    <footer class="bg-primary-dark text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Contact</h3>
-                    <p class="mb-2">Hoofdstraat 1</p>
-                    <p class="mb-2">9800 AA Zuidhorn</p>
-                    <p class="mb-2">Tel: 06-12345678</p>
-                    <p>Email: freek@vakmanschap.nl</p>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2023 Freek's Gitaar Reparatie. Alle rechten voorbehouden.</p>
                 </div>
                 
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Snelle Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-accent-amber transition duration-300">Home</a></li>
-                        <li><a href="guitar-repair.html" class="hover:text-accent-amber transition duration-300">Gitaar Reparatie</a></li>
-                        <li><a href="custom-furniture.html" class="hover:text-accent-amber transition duration-300">Meubels op Maat</a></li>
-                        <li><a href="furniture-repair.html" class="hover:text-accent-amber transition duration-300">Meubel Reparatie</a></li>
-                        <li><a href="about.html" class="hover:text-accent-amber transition duration-300">Over Freek</a></li>
-                        <li><a href="contact.html" class="hover:text-accent-amber transition duration-300">Contact</a></li>
-                    </ul>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-accent-light transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-accent-light transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm2.5 15.5h-5v-7h5v7zm0-8.5h-5V7.5h5V9z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-accent-light transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                        </svg>
+                    </a>
                 </div>
-                
-                <!-- Service Areas -->
-                <div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Servicegebied</h3>
-                    <p class="mb-4">Freek's Vakmanschap is gevestigd in Zuidhorn en bedient klanten in:</p>
-                    <ul class="space-y-1">
-                        <li>• Zuidhorn</li>
-                        <li>• Noordhorn</li>
-                        <li>• Briltil</li>
-                        <li>• En omliggende gebieden</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-cream border-opacity-20 mt-8 pt-8 text-center">
-                <p>&copy; 2023 Freek's Vakmanschap. Alle rechten voorbehouden.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for mobile menu toggle -->
+    <!-- JavaScript for mobile menu toggle and countdown -->
     <script>
+        // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
+        
+        // Countdown timer for special offer
+        const countdownElement = document.getElementById('countdown');
+        let daysRemaining = 14;
+        
+        // Update countdown every 24 hours (in a real site)
+        // For demo purposes, we'll update it every few seconds
+        setInterval(function() {
+            if (daysRemaining > 1) {
+                daysRemaining--;
+                countdownElement.textContent = daysRemaining;
+            } else {
+                countdownElement.textContent = "laatste dag";
+            }
+        }, 30000); // Update every 30 seconds for demo
     </script>
 </body>
 </html>
